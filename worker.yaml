@@ -8,6 +8,6 @@ metadata:
 spec:
   containers:
    - name: worker-app
-     image: worker-app-image
+     image: kodekloud/examplevotingapp_worker:v1
  
    
