@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Pod
+metadata:
+  name: voting-app-pod
+  labels:
+    name: voting-app
+    app: demo-voting-app
+spec:
+  template:
+  selector:
+  replicas:
