@@ -21,7 +21,7 @@ spec:
       containers:
         - name: postgres
           image: postgres
-        - ports:
+          ports:
           - containerPort: 5432
           env:
           - name: POSTGRES_USER
