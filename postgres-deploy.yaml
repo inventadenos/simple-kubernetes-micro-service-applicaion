@@ -1,11 +1,16 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: postgres-app-pod
+  name: postgres-deploy
   labels:
-    name: postgres-app
+    name: postgres-deploy
     app: demo-voting-app
 spec:
+  replicas: 1
+  matchLabels:
+    name: postgres-pod
+    app: demo-voting-app 
   template:
     metadata:
       name: postgres-pod
@@ -23,8 +28,3 @@ spec:
             value: "postgres"
           - name: POSTGRES_PASSWORD
             value: "postgres" 
-  selector:
-    matchLabels:
-       name: postgres-pod
-       app: demo-voting-app
-  replicas: 1
